@@ -30,7 +30,7 @@ with st.expander("Extracted Text"):
 
     # Summarize
     if st.button("Generate Summary"):
-        model = genai.GenerativeModel("gemini-pro")
+        model = genai.GenerativeModel("gemini-1.5-flash")
         summary = model.generate_content(f"Summarize this text in bullet points:\n{text}")
         st.subheader("📝 Summary")
         st.write(summary.text)
