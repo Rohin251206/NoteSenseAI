@@ -26,7 +26,7 @@ else:
     # Summarize
 if st.button("Generate Summary"):
     model = genai.GenerativeModel("gemini-1.5-flash")
-    summary = model.generate_content(f"Summarize this text in bullet points:\n{text}")
+    summary = model.generate_content(f"Summarize this text in a short but detailed manner, and give it in bullet points:\n{text}")
     st.subheader("📝 Summary")
     st.write(summary.text)
 
